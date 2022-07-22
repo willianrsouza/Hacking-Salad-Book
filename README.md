@@ -2,6 +2,17 @@
 My own hacking book, learning.  Boost your Pentest with these recipes.
 
 
+
+
+
+
+
+
+
+
+
+
+
 ## Protocolo Diffie-Hellman
 
    **Data Publicação:** 1976
