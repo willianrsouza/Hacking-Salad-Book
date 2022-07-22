@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome file</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h2 id="protocolo-diffie-hellman">Protocolo Diffie-Hellman</h2>
+<p><strong>Data Publicação:</strong> 1976<br>
+<strong>Desenvolvido:</strong> Whitefield e Martin</p>
+<ul>
+<li>
+<p><strong>Objetivo</strong><br>
+Resolver o problema de envio de uma chave secreta, por meio de comunicações inseguras. Utilizado exclusivamente para realizar trocas de chaves.</p>
+</li>
+<li>
+<p><strong>Cálculo Simples Modular</strong></p>
+</li>
+</ul>
+<p><img src="https://skerritt.blog/media/diffie/9.png" alt="enter image description here"></p>
+<p>O calculo modular para a criptografia é interessante pois, realizar sua reversão, e encontrar o valor de input dos dados é extremamente incerto. É basicamente uma função de mão única.</p>
+<p><strong>Prática</strong></p>
+<ul>
+<li><strong>Step 1</strong></li>
+</ul>
+<p><strong>Os usuários, definem um numero inteiro, exemplo: 5, e numero primo, exemplo: 17, e  o compartilham.</strong></p>
+<p><em><strong>(Nota: Até o momento o Man in the Middle, consegue facilmente capturar essa escolha.)</strong></em></p>
+<ul>
+<li><strong>Step 2</strong></li>
+</ul>
+<p>Após essa definição, cada usuário escolhera individualmente um numero secreto. Esses números não serão transmitidos pela internet.</p>
+<p><strong>Pedro</strong>, escolhe: <strong>24</strong><br>
+<strong>Willian</strong>, escolhe: <strong>52</strong></p>
+<ul>
+<li><strong>Step 3</strong></li>
+</ul>
+<p>Valores acordados, pelos usuários: <strong>Inteiro: 5</strong> , <strong>Primo: 17</strong></p>
+<p><strong>Pedro:</strong></p>
+<p><strong>5^24 mod 17 = 16</strong></p>
+<p>Pedro, envia o resultado para Willian. <strong>Resultado: 16.</strong></p>
+<p><em><strong>(Nota: Até o momento o Man in the Middle, consegue facilmente capturar essa escolha.)</strong></em></p>
+<ul>
+<li><strong>Step 4</strong></li>
+</ul>
+<p><em>(Valor recebido de Pedro, é armazenado: <strong>16.</strong>)</em><br>
+Agora já recebido o <strong>resultado</strong> de <strong>Pedro</strong>, <strong>Willian</strong> realizara a sua simples formula matemática.</p>
+<p>Valores acordados, pelos usuários: <strong>Inteiro: 5</strong> , <strong>Primo: 17</strong></p>
+<p><strong>Willian:</strong>  5^52 mod 17 = 13</p>
+<p>Willian, envia o resultado para Pedro, esse valor é armazenado por Pedro. <strong>Resultado: 13.</strong></p>
+<p><em><strong>(Nota: Até o momento o Man in the Middle, consegue facilmente capturar essa escolha.)</strong></em></p>
+<ul>
+<li><strong>Step 5</strong></li>
+</ul>
+<p>Após cada usuário, possuírem os resultados de cada um. Cada um, irá fazer outro calculo modular:</p>
+<p><strong>Willian:</strong> 16^52 mod 17 = 1</p>
+<p><strong>Pedro:</strong> 13^24 mod 17 = 1</p>
+<p>Os usuários utilizam os seus números secretos, que não foram transmitidos em momento algum, como expoente. Dessa forma os dois usuários, chegaram ao mesmo produto. Esse resultado, será a chave de criptografia.</p>
+<ul>
+<li><strong>Conclusão:</strong></li>
+</ul>
+<p>Os números secretamente escolhidos, não foram transmitidos pela internet, somente o produto gerado. Após a obtenção do produto de cada um, eles puderam realizar a formula para chegar a um produto comum.</p>
+<p>Mentor: @<a href="https://www.linkedin.com/in/pedro-dantas-cybersecurity-engineer/">Pedro Dantas</a></p>
+</div>
+</body>
+
+</html>
